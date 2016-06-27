@@ -1,0 +1,17 @@
+﻿@using Domain.Entidades
+@{
+    // TODO: Consider setting Layout set automatially in _ViewStart.cshtml
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+    ViewBag.Title = "Painel";
+    
+    ViewBag.Breadcrumb = new Breadcrumb(new Crumb[] {
+        new Crumb(ViewBag.Title, "Index", "fa-dashboard")
+    });
+}
+
+<!-- Date dd/mm/yyyy -->
+<div class="row">
+    
+</div>
+

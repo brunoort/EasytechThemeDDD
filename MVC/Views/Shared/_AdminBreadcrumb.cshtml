@@ -1,0 +1,30 @@
+﻿@using Domain.Entidades
+
+@if (ViewBag.Breadcrumb != null)
+{
+    <ol class="breadcrumb">
+        <li>
+            <a href="/Home/Painel">
+                <span>Home</span>
+            </a>
+
+        </li>
+        @foreach (Crumb crumb in ViewBag.Breadcrumb)
+        {
+            <li>
+                @if (crumb.HasLink)
+                {
+                    <a href="@crumb.Link">
+
+                        <span>@crumb.Text</span>
+                    </a>
+                }
+                else
+                {
+
+                    <span>@crumb.Text</span>
+                }
+                </li>
+        }
+    </ol>
+}

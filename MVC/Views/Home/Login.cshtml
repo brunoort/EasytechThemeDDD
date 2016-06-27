@@ -1,0 +1,64 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "Index";
+}
+<title>Easytech</title>
+<link rel="stylesheet" href="~/Content/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+<link href="~/Content/AdminLTE/AdminLTE.min.css" rel="stylesheet" />
+<link href="~/Content/AdminLTE/AdminLTE.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/growlNotify")
+
+<script src="~/Scripts/globalFunctions.js"></script>
+
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="#"><b>Easytech</b>SIS</a>
+        </div>
+        <!-- /.login-logo -->
+        <div class="login-box-body">
+            <p class="login-box-msg">Preencha abaixo para acessar o sistema</p>
+            <form action="/Home/Login" method="post">
+                <div class="form-group has-feedback">
+                    <input id="Login" name="Login" type="text" class="form-control" placeholder="Login" required>
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input id="Senha" name="Senha" type="password" class="form-control" placeholder="Senha" required>
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="row" style="margin-left: 0px !important">
+                    <div class="col-xs-8">
+                        <div class="checkbox icheck">
+                            <label>
+                                <input type="checkbox" id="Lembrar" name="Lembrar" value="true" checked="checked"> Lembrar-me
+                            </label>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-xs-4">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </form>
+            <a href="#">Esqueci minha senha</a>
+        </div>
+        <br />
+        @if (ViewData["Error"] != null)
+        {
+            <script>
+                callNotify("Login ou senha inválidos.", 'danger', 'right');
+            </script>
+        }
+        <!-- /.login-box-body -->
+    </div>
+    <!-- /.login-box -->
+</body>
+
+

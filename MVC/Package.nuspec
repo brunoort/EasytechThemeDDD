@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>EasytechThemeMVC3</id>
+    <version>1.0</version>
+    <authors>Bruno Ortiz</authors>
+    <owners>Easytech</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Tema inicial MVC para projetos</description>
+    <tags>easytech</tags>
+    </metadata>
+	<files>
+		<file src="Views/*" target="Views" />
+		<file src="Scripts/*" target="Scripts" />
+		<file src="fonts/*" target="fonts" />
+		<file src="Controllers/*" target="Controllers" />
+		<file src="Content/*" target="Content" />
+		<file src="App_Start/*.*" target="App_Start" />
+	</files>
+</package>

@@ -1,0 +1,80 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="header">MENU</li>
+            @foreach (var itemMenu in ViewBag.Menu)
+            {
+                <li id="@Html.Raw("menu" + itemMenu.Id)" class="treeview">
+                    <a href="#">
+                        <i class="fa fa-navicon"></i> <span>@itemMenu.Descricao</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    @if (itemMenu.Submenus.Count > 0)
+                    {
+                        <ul class="treeview-menu">
+                            @foreach (var itemSub in itemMenu.Submenus)
+                            {
+                                <li><a href="@itemSub.Url"><i class="fa fa-chevron-right"></i>@itemSub.Descricao</a></li>
+                            }
+                        </ul>
+                    }
+
+                </li>
+            }
+
+            @*<li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-share"></i> <span>Menu</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o"></i> Level One <i class="fa fa-angle-left pull-right"></i></a>
+                            <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
+                                <li>
+                                    <a href="#"><i class="fa fa-circle-o"></i> Level Two <i class="fa fa-angle-left pull-right"></i></a>
+                                    <ul class="treeview-menu">
+                                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+                    </ul>
+                </li>*@
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>
+
+@Scripts.Render("~/bundles/jquery")
+<script>
+    var pathArray = window.location.pathname.split('/');
+
+    $.ajax({
+        type: "post",
+        url: "/Menu/MenuAtivo", // Location of the service
+        contentType: "application/json;charset=utf-8", // content type sent to server
+        dataType: "json",
+        data: "{'pLink1':'" + pathArray[1] + "'}",
+        success: function (data) {
+            if (data != "") {
+                //alert(data);
+                $("#menu"+data).addClass("active");
+            }
+        }
+    });
+
+    
+</script>

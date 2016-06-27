@@ -1,0 +1,166 @@
+﻿body {
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+    margin-bottom: 10px;
+}
+
+.red{
+    color:red !important;
+    font-weight:bold;
+    font-size:12px;
+}
+
+.skin-blue .main-header .logo {
+    background-color: #222d32 !important;
+}
+
+.green{
+    font-size:13px;
+    color:#046403;
+    font-weight:bold;
+}
+
+.skin-blue .main-header .navbar {
+    background-color: #222d32 !important;
+}
+
+.skin-blue .main-header .logo {
+    background-color: black !important;
+
+}
+
+.content-header{
+    margin-top: 0px;
+    background: white !important;
+    height: 35px;
+}
+
+.content-header>.breadcrumb {
+    background: transparent;
+    margin-bottom: 0;
+    font-size: 12px;
+    padding: 7px 5px;
+    border-radius: 2px;
+}
+
+.box{
+        border-top: 3px solid #D43135;
+}
+
+.btnclick{
+    width:90px;
+    padding:5px;
+    display:inline-table;
+}
+
+.form-group {
+    padding:5px;
+}
+
+.has-feedback{
+    padding:0px !important;
+}
+
+.form-group > label {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 15px;
+    font-size: 12px;
+}
+
+.box-title{
+    color:#D43135;
+    padding:10px;
+}
+
+.sidebar-menu > li.active> a, .sidebar-menu > li > a {
+    text-decoration:none;
+}
+
+.sidebar-menu > li > a.hover {
+    text-decoration:none;
+}
+
+.dt-buttons{
+    float: right;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #48494a !important;
+    border-color: #222d32 !important;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #465358 !important;
+    border-color: #d0d0d0 !important;
+}
+
+.table {
+    font-size:11.5px;
+}
+
+li,ul{
+    text-decoration:none;
+}
+
+.login-page, .register-page {
+    background: #48494a;
+}
+
+.login-logo a, .register-logo a {
+    color: #fff2f2;
+}
+
+select {
+      margin-left: 0px !important;
+}
+
+.selectmulti{
+    margin-left:-5px !important;
+}
+
+.table-layout {
+    display:table;
+    width:100%;
+}
+.table-layout .table-cell {
+    display:table-cell;
+    border:solid 1px #ccc;
+}
+
+.fixed-width-200 {
+    width:200px;
+}
+
+.fa {
+    margin-right: 4px;
+}
+
+.main-footer{
+    font-size:11px
+}
+
